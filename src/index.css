@@ -1,0 +1,499 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #038a96;
+  padding: 0.8rem 2rem;
+  color: white;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits text color */
+}
+
+.navbar-left:hover {
+  text-decoration: none; /* Ensures underline doesn't appear on hover */
+  color: inherit; /* Maintains text color on hover */
+}
+
+
+.navbar-logo {
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.navbar-title h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.navbar-title p {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-links li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(252, 252, 252);
+}
+
+.health-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 40px;
+  background-color: #fff;
+}
+
+.health-image img {
+  width: 500px;
+  height: auto;
+
+  object-fit: cover;
+}
+.health-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 40px;
+  background-color: #fff;
+}
+
+.health-image {
+/* Light gray border */
+
+  overflow: hidden;
+  width: 500px;
+  height: auto;
+  display: flex;
+}
+
+
+.health-content {
+  max-width: 600px;
+}
+
+.health-content h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.health-content .highlight {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.health-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+.border-wrapper {
+  position: relative;
+  display: inline-block;
+  border-right: 20px solid #00B4C6; /* Outer border color */
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  padding-right: 20px;
+}
+
+.border-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #66D5DA; /* Inner border color */
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  z-index: 1;
+}
+
+.main-image {
+  display: block;
+  border-radius: 10px 60px 60px 10px;
+  position: relative;
+  z-index: 2;
+}
+.health-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.health-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.health-image img {
+  width: 400px;
+  border-radius: 12px;
+}
+
+.health-content {
+  max-width: 500px;
+}
+
+.highlight {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/* Outer larger border */
+.health-image-outer {
+  border: 8px solid #00B4C6; /* Outer border color */
+  border-top-right-radius: 1100px;
+  border-bottom-right-radius: 100px;
+  padding: 8px; /* Space between borders */
+  display: inline-block;
+  width: fit-content;
+}
+
+
+/* Image inside */
+.health-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.about-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #fdfdfd;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #038a96;
+  margin-bottom: 1.5rem;
+}
+
+.about-card {
+  background: #ffffff;
+  border: 2px solid #00B4C6;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 180, 198, 0.2);
+}
+
+.about-card h2 {
+  margin-bottom: 1rem;
+  color: #013341;
+}
+
+.about-card h3 {
+  margin-top: 2rem;
+  color: #038a96;
+}
+
+.about-card p,
+.about-card li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.about-card a {
+  color: #012529;
+  text-decoration: none;
+}
+
+.about-card ul {
+  padding-left: 1.2rem;
+}
+.about-card {
+  background: #ffffff;
+  border: 2px solid #00B4C6;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 180, 198, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+.navbar-links li a:hover {
+  color: #00ffe7;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.health-content {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+.health-image-outer {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeScaleUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeScaleUp {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@500&display=swap');
+
+.about-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  font-family: 'Poppins', sans-serif;
+  color: #1c1c1c;
+  background: linear-gradient(to right, #f7fdfd, #e6f7f8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 180, 198, 0.15);
+  animation: fadeSlideUp 0.8s ease-in-out;
+}
+
+.about-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  color: #02656e;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.about-card {
+  background: #eaefef;
+  border: 2px solid #037782;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 180, 198, 0.25);
+}
+
+.clinic-name {
+  color: #013341;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.label {
+  font-weight: 600;
+  color: #02656e;
+}
+
+.about-card a {
+  color: #007c91;
+  text-decoration: underline;
+}
+
+.clinic-hours-title {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #038a96;
+  border-bottom: 2px solid #00B4C6;
+  padding-bottom: 0.3rem;
+}
+
+.clinic-hours-list {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.clinic-hours-list li {
+  margin-bottom: 0.6rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.icon {
+  color: #038a96;
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 1.1rem;
+}
+.contact-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f5fafa;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 180, 198, 0.2);
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-container h1 {
+  text-align: center;
+  color: #02656e;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #013341;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1.5px solid #87c4c8;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #02656e;
+}
+
+.submit-button {
+  background-color: #00b4c6;
+  color: rgb(5, 5, 5);
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-size: 30;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #49bac7;
+}/* Animation keyframes */
+@keyframes fadeInUpContact {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to the contact section */
+.contact-container {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUpContact 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Smooth animation for each form input */
+.contact-form input,
+.contact-form textarea,
+.submit-button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpContact 0.6s ease forwards;
+}
+
+/* Delay each input slightly for staggered effect */
+.contact-form input:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+.contact-form input:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+.contact-form textarea {
+  animation-delay: 0.6s;
+}
+.submit-button {
+  animation-delay: 0.7s;
+}
+.submit-button {
+  background-color: #00b4c6;
+  color: rgb(5, 5, 5);
+  border: none;
+  padding: 1.5rem;        /* Smaller padding */
+  font-size: 1rem;             /* Smaller font size */
+  font-weight: 300;            /* Still bold, but not too heavy */
+  border-radius: 4px;          /* Slightly smaller rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
